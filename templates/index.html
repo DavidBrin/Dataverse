@@ -1,56 +1,64 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Cargo Container Monitoring</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoyagerSafe - Cargo Tracking</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-<a href="/dashboard">Dashboard</a>
-<a href="/register">Register Container</a>
-</nav>
-<header>
-<h1>Cargo Container Monitoring</h1>
-<img src="Bard_Generated_Image.jfif" alt="Logo">
-</header>
-<main>
-<div class="tabs">
-<ul>
-<li><a href="#temperature">Temperature</a></li>
-<li><a href="#humidity">Humidity</a></li>
-<li><a href="#pressure">Pressure</a></li>
-</ul>
-<div id="temperature">
-<h2>Temperature</h2>
-<div class="data">
-<p>Current Temperature: 20°C</p>
-<p>Min Temperature: 15°C</p>
-<p>Max Temperature: 25°C</p>
-</div>
-</div>
-<div id="humidity">
-<h2>Humidity</h2>
-<div class="data">
-<p>Current Humidity: 50%</p>
-<p>Min Humidity: 40%</p>
-<p>Max Humidity: 60%</p>
-</div>
-</div>
-<div id="pressure">
-<h2>Pressure</h2>
-<div class="data">
-<p>Current Pressure: 1013 hPa</p>
-<p>Min Pressure: 990 hPa</p>
-<p>Max Pressure: 1020 hPa</p>
-</div>
-</div>
-</div>
-</main>
-<footer>
-<p>Copyright &copy; 2023 Cargo Container Monitoring</p>
-</footer>
+    <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/register">Register Container</a>
+    </nav>
+    <header>
+        <h1>VoyagerSafe - Cargo Tracking</h1>
+        <img src="voyagersafe_logo.png" alt="VoyagerSafe Logo">
+    </header>
+    <main>
+        <div class="tabs">
+            <ul>
+                <li><a href="#temperature">Temperature</a></li>
+                <li><a href="#humidity">Humidity</a></li>
+                <li><a href="#pressure">Pressure</a></li>
+                <li><a href="#location">Location</a></li> <!-- Additional tab for location -->
+            </ul>
+            <div id="temperature">
+                <h2>Temperature</h2>
+                <div class="data">
+                    <p id="current-temperature">Loading...</p> <!-- Dynamic content for real-time data -->
+                    <p>Min Temperature: 15°C</p>
+                    <p>Max Temperature: 25°C</p>
+                </div>
+            </div>
+            <div id="humidity">
+                <h2>Humidity</h2>
+                <div class="data">
+                    <p id="current-humidity">Loading...</p> <!-- Dynamic content for real-time data -->
+                    <p>Min Humidity: 40%</p>
+                    <p>Max Humidity: 60%</p>
+                </div>
+            </div>
+            <div id="pressure">
+                <h2>Pressure</h2>
+                <div class="data">
+                    <p id="current-pressure">Loading...</p> <!-- Dynamic content for real-time data -->
+                    <p>Min Pressure: 990 hPa</p>
+                    <p>Max Pressure: 1020 hPa</p>
+                </div>
+            </div>
+            <div id="location"> <!-- Additional section for location -->
+                <h2>Location</h2>
+                <div class="data">
+                    <p id="current-location">Loading...</p> <!-- Dynamic content for real-time data -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 VoyagerSafe - Cargo Tracking</p>
+    </footer>
+    <!-- JavaScript for fetching and updating real-time data -->
+    <script src="script.js"></script>
 </body>
 </html>
-
-
