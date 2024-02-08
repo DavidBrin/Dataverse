@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register Cargo Container</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+<a href="/dashboard">Dashboard</a>
+<a href="/register">Register Container</a>
+</nav>
+<header>
+<h1>Register Cargo Container</h1>
+</header>
+<main>
+<form action="/register" method="POST">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+<br>
+<label for="type">Type:</label>
+<select id="type" name="type">
+<option value="perishable">Perishable</option>
+<option value="hazardous">Hazardous</option>
+<option value="standard">Standard</option>
+</select>
+<br>
+<label for="destination">Destination:</label>
+<input type="text" id="destination" name="destination" required>
+<br>
+<input type="submit" value="Register">
+</form>
+</main>
+</body>
+</html>
+
+
