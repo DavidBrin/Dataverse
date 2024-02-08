@@ -39,4 +39,7 @@ if __name__ == '__main__':
     app.run()
 
 
-This Python code implements a Flask application that serves as a dashboard for cargo container monitoring. It includes routes for displaying the dashboard, registering cargo containers, and retrieving real-time data from the containers. The code is validated to ensure proper references to all variables used in the HTML files.
+# This Python code implements a Flask application that serves as a dashboard for cargo container monitoring.
+#It includes routes for displaying the dashboard, registering cargo containers, 
+#    and retrieving real-time data from the containers.
+#The code is validated to ensure proper references to all variables used in the HTML files.
