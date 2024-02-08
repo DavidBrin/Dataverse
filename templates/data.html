@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Real-Time Data</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+<a href="/dashboard">Dashboard</a>
+<a href="/register">Register Container</a>
+</nav>
+<header>
+<h1>Real-Time Data</h1>
+</header>
+<main>
+<table>
+<thead>
+<tr>
+<th>Container Name</th>
+<th>Temperature</th>
+<th>Humidity</th>
+<th>Pressure</th>
+</tr>
+</thead>
+<tbody>
+<!-- Data will be populated dynamically using JavaScript -->
+</tbody>
+</table>
+</main>
+<script>
+// Function to fetch real-time data and update the table
+function updateData() {
+fetch('/data')
+.then(response => response.json())
+.then(data => {
+// Clear the existing table body
+const tbody = document.querySelector('tbody');
+tbody.innerHTML = '';
+
+// Add a row for each container
+data.forEach(container => {
+const row = document.createElement('tr');
+
+const nameCell = document.createElement('td');
+nameCell.textContent = container.name;
+
+const temperatureCell = document.createElement('td');
+temperatureCell.textContent = container.temperature;
+
+const humidityCell = document.createElement('td');
+humidityCell.textContent = container.humidity;
+
+const pressureCell = document.createElement('td');
+pressureCell.textContent = container.pressure;
+
+row.appendChild(nameCell);
+row.appendChild(temperatureCell);
+row.appendChild(humidityCell);
+row.appendChild(pressureCell);
+
+tbody.appendChild(row);
+});
+})
+.catch(error => {
+console.error('Error fetching data', error);
+});
+}
+
+// Call the updateData function every 3 seconds
+setInterval(updateData, 3000);
+</script>
+</body>
+</html>
+
