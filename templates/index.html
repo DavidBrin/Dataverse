@@ -5,6 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoyagerSafe - Cargo Tracking</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #3498db; /* Blue background */
+            color: #fff; /* White text */
+            font-family: Arial, sans-serif; /* Font style */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        nav {
+            background-color: #2980b9; /* Darker blue navigation bar */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff; /* White text for navigation links */
+            text-decoration: none; /* Remove underline */
+            margin: 0 10px; /* Add margin between links */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .tabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+            gap: 20px; /* Add spacing between sections */
+        }
+
+        .tabs ul {
+            list-style-type: none; /* Remove default list style */
+            padding: 0; /* Remove default padding */
+        }
+
+        .tabs li {
+            margin-bottom: 10px; /* Add margin between list items */
+        }
+
+        .tabs li a {
+            display: block;
+            padding: 10px;
+            background-color: #2980b9; /* Darker blue background for tabs */
+            color: #fff; /* White text */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Add rounded corners */
+        }
+
+        .tabs li a:hover {
+            background-color: #3498db; /* Lighter blue background on hover */
+        }
+
+        .data {
+            background-color: #2980b9; /* Darker blue background for data sections */
+            padding: 10px;
+            border-radius: 5px; /* Add rounded corners */
+        }
+
+        .data p {
+            margin: 0; /* Remove default margin */
+        }
+
+        footer {
+            background-color: #2980b9; /* Darker blue footer */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -50,7 +127,7 @@
             <div id="location"> <!-- Additional section for location -->
                 <h2>Location</h2>
                 <div class="data">
-                    <p id="current-location">Loading...</p> <!-- Dynamic content for real-time data -->
+                    <div id="map" class="map-loading">Map Loading...</div> <!-- Placeholder for the map -->
                 </div>
             </div>
         </div>
@@ -58,7 +135,5 @@
     <footer>
         <p>&copy; 2024 VoyagerSafe - Cargo Tracking</p>
     </footer>
-    <!-- JavaScript for fetching and updating real-time data -->
-    <script src="script.js"></script>
 </body>
 </html>
